@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2 #Atributo de classe
+
     def __init__(self, *filhos, nome=None, idade=None):
         self.idade = idade
         self.nome = nome
@@ -18,5 +20,9 @@ if __name__ == '__main__':
     print()
     bruna.sobrenome =  'Araujo' #Incluir atributo em tempo de execução (dinâmico)
     del bruna.filhos #Remover atributo em tempo de execução (dinâmico)
-    print(bruna.__dict__)
-    print(lorenzo.__dict__)
+    bruna.olhos = 1
+    del bruna.olhos
+    print(bruna.__dict__) #Apenas atributos de instância
+    print(lorenzo.__dict__) #Apenas atributos de instância
+    print()
+    print(f'As pessoas possuem  {Pessoa.olhos} olhos')
