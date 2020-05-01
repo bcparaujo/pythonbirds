@@ -15,3 +15,8 @@ if __name__ == '__main__':
     print()
     for filho in bruna.filhos:
         print(f'Filhos do(a) {bruna.nome}:\n{filho.nome}')
+    print()
+    bruna.sobrenome =  'Araujo' #Incluir atributo em tempo de execução (dinâmico)
+    del bruna.filhos #Remover atributo em tempo de execução (dinâmico)
+    print(bruna.__dict__)
+    print(lorenzo.__dict__)
